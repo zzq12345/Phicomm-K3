@@ -16,8 +16,12 @@
 #limitations under the License.
 #
 
+src-git custom https://github.com/kiddin9/openwrt-packages.git;master
+
 echo '添加SSRPLUS软件源'
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
+sed -i '$a src-git custom https://github.com/kiddin9/openwrt-packages' feeds.conf.default
+sed -i '$a src-git CMJ781 https://github.com/CMJ781/OP-Packages' feeds.conf.default
 cat feeds.conf.default
 echo '=========Add feed source OK!========='
 
